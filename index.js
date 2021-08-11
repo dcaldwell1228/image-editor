@@ -33,8 +33,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("opacity").value = 100;
             document.getElementById("saturate").value = 100;
             document.getElementById("sepia").value = 0;
-            
         });
+        
+        var img = document.getElementById("image");
+        var angle = [0, 90, 180, 270];
+        var current = 0;
+        var element = document.getElementById('rotateRight');
+        element.addEventListener('click', ()=>{
+            current++;
+            if (current == 4){
+                current = 0;
+            }
+            img.style.transform = `rotate(${angle[current]}deg)`;
+
+            console.log(current);
+        });
+
+        
 });
 //functionality left to add
 //---------------------------
