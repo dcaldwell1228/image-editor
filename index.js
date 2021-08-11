@@ -36,3 +36,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             
         });
 });
+//functionality left to add
+//---------------------------
+    // add ability to rotate images
+    // possibly round corners
+    // add border size and color
+    // maybe look into canvas and possibly download image
+    // maybe a zoom in feature
+    // maybe a crop feature
