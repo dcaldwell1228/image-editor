@@ -39,3 +39,14 @@ img{
 .imageContainer{
     padding: 25px 25px;
 }
+.resetButton{
+    text-decoration:none;
+    padding: 5px;
+    background-color:#838996;
+    color:#fff; 
+    border-radius:5px;
+}
+.resetButton:hover{
+    text-decoration:none;
+
+}

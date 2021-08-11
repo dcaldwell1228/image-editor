@@ -22,4 +22,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             + "saturate("+ saturate +"%) "
             + "sepia("+ sepia +"%) ";
         });
+        var resetButton = document.getElementById('reset');
+        resetButton.addEventListener('click', ()=> {
+            document.getElementById("blur").value = 0;
+            document.getElementById("brightness").value = 100;
+            document.getElementById("contrast").value = 100;
+            document.getElementById("grayscale").value = 0;
+            document.getElementById("hue").value = 0;
+            document.getElementById("invert").value = 0;
+            document.getElementById("opacity").value = 100;
+            document.getElementById("saturate").value = 100;
+            document.getElementById("sepia").value = 0;
+            
+        });
 });
