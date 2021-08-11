@@ -1,0 +1,41 @@
+html{
+    font-size:16px;
+}
+body{
+    background-color:#838996!important;
+}
+img{
+    width:100%;
+}
+.center{
+    text-align:center;
+}
+.appName{
+    font-size: 3rem;
+    font-weight:600;
+    color:#fff;
+    padding: 5px 5px;
+}
+.main{
+    padding: 5px 5px;
+}
+.filters{
+    font-weight: 600;
+    color:#838996;
+    font-size: 1.7rem;
+}
+.wrapper{
+    display:flex;
+    overflow-x:auto;
+}
+.item{
+    margin-left:2px;
+    font-weight: 500;
+}
+.well{
+    padding:5px 5px;
+    background-color:#bfc1c2!important;
+}
+.imageContainer{
+    padding: 25px 25px;
+}
