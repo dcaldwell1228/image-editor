@@ -13,6 +13,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             var sepia = document.getElementById("sepia").value;
             var image = document.getElementById("image");
 
+            var rdcorners = document.getElementById("rdcorners").value;
+            // image filters
             image.style.filter = "blur("+ blur +"px) "
             + "brightness("+ brightness +"%) "
             + "contrast("+ contrast +"%) "
@@ -22,6 +24,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             + "opacity("+ opacity +"%) "
             + "saturate("+ saturate +"%) "
             + "sepia("+ sepia +"%) ";
+            //image rounded corners
+            image.style.borderRadius = rdcorners+ "px";
         });
         var resetButton = document.getElementById('reset');
         resetButton.addEventListener('click', ()=> {
@@ -68,8 +72,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 //functionality left to add
 //---------------------------
-    // add ability to rotate images
-    // possibly round corners
     // add border size and color
     // maybe look into canvas and possibly download image
     // maybe a zoom in feature
