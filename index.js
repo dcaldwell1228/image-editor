@@ -52,6 +52,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("opacity").value = 100;
             document.getElementById("saturate").value = 100;
             document.getElementById("sepia").value = 0;
+            document.getElementById("rdcorners").value = 0;
+            document.getElementById("border-w").value = 0;
         });
         //Image rotation buttons
         var img = document.getElementById("image");
