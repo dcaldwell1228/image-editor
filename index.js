@@ -89,3 +89,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // maybe look into canvas and possibly download image
     // maybe a zoom in feature
     // maybe a crop feature
+    // gradients
