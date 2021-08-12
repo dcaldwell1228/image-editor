@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+    // image filters
     setInterval(
         ()=>{
             var blur = document.getElementById("blur").value;
@@ -34,19 +35,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("saturate").value = 100;
             document.getElementById("sepia").value = 0;
         });
-        
+        //Image rotation buttons
         var img = document.getElementById("image");
         var angle = [0, 90, 180, 270];
         var current = 0;
-        var element = document.getElementById('rotateRight');
-        element.addEventListener('click', ()=>{
+        var rotateR = document.getElementById('rotateRight');
+        var rotateL = document.getElementById('rotateLeft');
+        rotateR.addEventListener('click', ()=>{
             current++;
             if (current == 4){
                 current = 0;
             }
             img.style.transform = `rotate(${angle[current]}deg)`;
-
-            console.log(current);
+        });
+        rotateL.addEventListener('click', ()=>{
+            current++;
+            if (current == 4){
+                current = 0;
+            }
+            img.style.transform = `rotate(${angle[current]*-1}deg)`;
+            console.log(angle[current]*-1);
         });
 
         
