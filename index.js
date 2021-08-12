@@ -12,8 +12,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             var saturate = document.getElementById("saturate").value;
             var sepia = document.getElementById("sepia").value;
             var image = document.getElementById("image");
-
             var rdcorners = document.getElementById("rdcorners").value;
+            var borderWidth = document.getElementById("border-w").value;
+            var borderColor = document.getElementById("border-color").value;
             // image filters
             image.style.filter = "blur("+ blur +"px) "
             + "brightness("+ brightness +"%) "
@@ -25,7 +26,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             + "saturate("+ saturate +"%) "
             + "sepia("+ sepia +"%) ";
             //image rounded corners
-            image.style.borderRadius = rdcorners+ "px";
+            image.style.borderRadius = rdcorners + "px";
+            //border
+            image.style.border = borderWidth + "px" + " solid " + borderColor;
+            
         });
         var resetButton = document.getElementById('reset');
         resetButton.addEventListener('click', ()=> {
@@ -66,9 +70,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             } else{
             img.style.transform = `rotate(${angle[current]*-1}deg)`;
             }
-        });
-
-        
+        }
+    );    
 });
 //functionality left to add
 //---------------------------
