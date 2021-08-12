@@ -46,15 +46,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (current == 4){
                 current = 0;
             }
+            if(current == 1 || current == 3){
+                img.style.transform = `rotate(${angle[current]}deg) scale(.65)`;
+            } else{
             img.style.transform = `rotate(${angle[current]}deg)`;
+            }
         });
         rotateL.addEventListener('click', ()=>{
             current++;
             if (current == 4){
                 current = 0;
             }
+            if(current == 1 || current == 3){
+                img.style.transform = `rotate(${angle[current]*-1}deg) scale(.65)`;
+            } else{
             img.style.transform = `rotate(${angle[current]*-1}deg)`;
-            console.log(angle[current]*-1);
+            }
         });
 
         
