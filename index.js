@@ -29,7 +29,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             image.style.borderRadius = rdcorners + "px";
             //border
             image.style.border = borderWidth + "px" + " solid " + borderColor;
-            
+            //generate CSS
+            var css = document.getElementById('css-code');
+            css.innerHTML = `
+                \/\/Copy and paste the code into your project, I would reccommend changging the img to a class name or id
+                img{
+                    border:${borderWidth}px solid ${borderColor};
+                    border-radius:${rdcorners}px;
+                    filter:blur(${blur}px) brightness(${brightness}%) contrast(${contrast}%) grayscale(${grayscale}%) 
+                            hue-rotate(${hue}deg) invert(${invert}%) opacity(${opacity}%) saturate(${saturate}%) sepia(${sepia}%);
+                }
+            `;
         });
         var resetButton = document.getElementById('reset');
         resetButton.addEventListener('click', ()=> {
@@ -55,7 +65,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 current = 0;
             }
             if(current == 1 || current == 3){
-                img.style.transform = `rotate(${angle[current]}deg) scale(.65)`;
+                img.style.transform = `rotate(${angle[current]}deg) scale(.55)`;
             } else{
             img.style.transform = `rotate(${angle[current]}deg)`;
             }
@@ -66,16 +76,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 current = 0;
             }
             if(current == 1 || current == 3){
-                img.style.transform = `rotate(${angle[current]*-1}deg) scale(.65)`;
+                img.style.transform = `rotate(${angle[current]*-1}deg) scale(.55)`;
             } else{
             img.style.transform = `rotate(${angle[current]*-1}deg)`;
             }
-        }
-    );    
-});
+        } 
+    );  //ends rotateL
+}); // ends DOMCotentLoaded
+
 //functionality left to add
 //---------------------------
-    // add border size and color
     // maybe look into canvas and possibly download image
     // maybe a zoom in feature
     // maybe a crop feature
