@@ -18,7 +18,9 @@ img{
     justify-content:center;
     padding: 10px 10px;
     overflow-y:hidden;
+    transform-origin: center;
 }
+
 .center{
     text-align:center;
 }
