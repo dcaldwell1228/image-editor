@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    // image filters
     setInterval(
         ()=>{
             var blur = document.getElementById("blur").value;
@@ -32,7 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             //generate CSS
             var css = document.getElementById('css-code');
             css.innerHTML = `
-                \/\/Copy and paste the code into your project, I would reccommend changging the img to a class name or id
+                \/* Copy and paste the code into your project, I would reccommend changing the img to a class name or id *\/
                 img{
                     border:${borderWidth}px solid ${borderColor};
                     border-radius:${rdcorners}px;
@@ -40,6 +39,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                             hue-rotate(${hue}deg) invert(${invert}%) opacity(${opacity}%) saturate(${saturate}%) sepia(${sepia}%);
                 }
             `;
+            
         });
         var resetButton = document.getElementById('reset');
         resetButton.addEventListener('click', ()=> {
@@ -91,4 +91,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // maybe look into canvas and possibly download image
     // maybe a zoom in feature
     // maybe a crop feature
-    // gradients
+    
